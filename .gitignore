@@ -1,5 +1,5 @@
-# AoC Input
-puzzle_input.txt
+# AoC Inputs
+puzzle_inputs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
