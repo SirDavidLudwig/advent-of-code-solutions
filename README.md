@@ -1,3 +1,3 @@
 # advent-of-code
 
-My solutions for Advent of Code challenges.
+My tools and solutions for Advent of Code challenges.
