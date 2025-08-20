@@ -1,0 +1,36 @@
+
+
+
+2,4,1,1,7,5,1,4,0,3,4,5,5,5,3,0
+
+bst combo(4)
+bxl 1
+cdv combo(5)
+bxl 4
+adv combo(3)
+bxc
+out combo(5)
+
+3 0
+
+
+B = A & 7        # bst combo(4)
+B = B xor 1      # bxl 1
+C = (A // 2**(B)) & 7  # cdv combo(5)
+B = B xor 4      # bxl 4
+A = A >> 3       # adv combo(3)
+0 = B xor C      # bcx
+
+C = (A >> (A & 7)) & 7
+
+(A & 7) xor 5 xor ((A >> (A & 7)) & 7)
+
+Search 10 bits
+0101010101
+
+B [0, 7]
+
+2**7
+>> B
+
+3 = B xor C
