@@ -7,7 +7,6 @@ fi
 
 if [ -f ".env" ]; then
     export $(grep -v '^#' .env | xargs)
-    echo "Loading environment..."
 fi
 
 if [ -z "$AOC_COOKIE" ]; then
@@ -35,8 +34,8 @@ if [ ! -f "$notebook_path" ]; then
 fi
 
 if [ ! -f "$puzzle_path" ]; then
-    curl --cookie "$AOC_COOKIE" https://adventofcode.com/$year/day/$day/input -o "$puzzle_path"
+    curl --cookie "$AOC_COOKIE" https://adventofcode.com/$year/day/$day/input -s -o "$puzzle_path"
 fi
 
-cat $puzzle_path
+less $puzzle_path
 
